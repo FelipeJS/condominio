@@ -24,7 +24,7 @@ public abstract class Pessoa extends EntidadeBase {
 	@Column(name = "telefone", nullable = false, length = 12)
 	private String telefone;
 
-	@Column(name = "email", length = 100)
+	@Column(name = "email", nullable = false, length = 100)
 	private String email;
 
 	public String getNome() {
