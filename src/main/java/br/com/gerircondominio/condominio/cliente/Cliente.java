@@ -29,10 +29,6 @@ public class Cliente extends Pessoa {
 	@Column(name = "valor_mensalidade", nullable = false)
 	private BigDecimal valorMensalidade;
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "data_cadastro", nullable = false)
-	private Calendar dataCadastro;
-
 	@Column(name = "ativo")
 	private Boolean ativo;
 
@@ -54,14 +50,6 @@ public class Cliente extends Pessoa {
 
 	public void setValorMensalidade(BigDecimal valorMensalidade) {
 		this.valorMensalidade = valorMensalidade;
-	}
-
-	public Calendar getDataCadastro() {
-		return dataCadastro;
-	}
-
-	public void setDataCadastro(Calendar dataCadastro) {
-		this.dataCadastro = dataCadastro;
 	}
 
 	public Boolean getAtivo() {

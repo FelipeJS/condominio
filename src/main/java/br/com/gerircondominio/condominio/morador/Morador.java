@@ -33,7 +33,7 @@ public class Morador extends Pessoa {
 	private Apartamento apartamento;
 
 	@Lob
-	private byte[] data;
+	private byte[] foto;
 
 	public String getRg() {
 		return rg;
@@ -59,11 +59,11 @@ public class Morador extends Pessoa {
 		this.apartamento = apartamento;
 	}
 
-	public byte[] getData() {
-		return data;
+	public byte[] getFoto() {
+		return foto;
 	}
 
-	public void setData(byte[] data) {
-		this.data = data;
+	public void setFoto(byte[] foto) {
+		this.foto = foto;
 	}
 }

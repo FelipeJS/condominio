@@ -1,14 +1,10 @@
 package br.com.gerircondominio.condominio.apartamento;
 
-import java.util.Calendar;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 import br.com.gerircondominio.condominio.condominio.Condominio;
 import br.com.gerircondominio.condominio.entidadebase.EntidadeBase;
@@ -36,10 +32,6 @@ public class Apartamento extends EntidadeBase {
 
 	@Column(name = "quantidade_vagas", nullable = false)
 	private Integer quantidadeVagas;
-
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "data_cadastro", nullable = false)
-	private Calendar dataCadastro;
 
 	@ManyToOne
 	@JoinColumn(name = "id_condominio")
@@ -75,14 +67,6 @@ public class Apartamento extends EntidadeBase {
 
 	public void setQuantidadeVagas(Integer quantidadeVagas) {
 		this.quantidadeVagas = quantidadeVagas;
-	}
-
-	public Calendar getDataCadastro() {
-		return dataCadastro;
-	}
-
-	public void setDataCadastro(Calendar dataCadastro) {
-		this.dataCadastro = dataCadastro;
 	}
 
 	public Condominio getCondominio() {

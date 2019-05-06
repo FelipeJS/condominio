@@ -1,14 +1,10 @@
 package br.com.gerircondominio.condominio.condominio;
 
-import java.util.Calendar;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 import br.com.gerircondominio.condominio.cliente.Cliente;
 import br.com.gerircondominio.condominio.entidadebase.EntidadeBase;
@@ -32,10 +28,6 @@ public class Condominio extends EntidadeBase {
 
 	@Column(name = "telefone", nullable = false, length = 12)
 	private String telefone;
-
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "data_cadastro", nullable = false)
-	private Calendar dataCadastro;
 
 	@ManyToOne
 	@JoinColumn(name = "id_cliente")
@@ -63,14 +55,6 @@ public class Condominio extends EntidadeBase {
 
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
-	}
-
-	public Calendar getDataCadastro() {
-		return dataCadastro;
-	}
-
-	public void setDataCadastro(Calendar dataCadastro) {
-		this.dataCadastro = dataCadastro;
 	}
 
 	public Cliente getCliente() {

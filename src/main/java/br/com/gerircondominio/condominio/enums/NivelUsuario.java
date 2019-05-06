@@ -7,16 +7,16 @@ package br.com.gerircondominio.condominio.enums;
  *         donos do sitema, que temos acesso a tudo.
  *
  */
-public enum Nivel {
+public enum NivelUsuario {
 	MORADOR(1), FUNCIONARIO(2), SINDICO(3), ADMINISTRADOR(4);
 
-	private Integer nivel;
+	private Integer nivelUsuario;
 
-	private Nivel(Integer nivel) {
-		this.nivel = nivel;
+	private NivelUsuario(Integer nivelUsuario) {
+		this.nivelUsuario = nivelUsuario;
 	}
 
-	public Integer getNivel() {
-		return nivel;
+	public Integer getNivelUsuario() {
+		return nivelUsuario;
 	}
 }

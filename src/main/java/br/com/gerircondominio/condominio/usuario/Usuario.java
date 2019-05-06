@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import br.com.gerircondominio.condominio.enums.Nivel;
+import br.com.gerircondominio.condominio.enums.NivelUsuario;
 import br.com.gerircondominio.condominio.pessoa.Pessoa;
 
 /**
@@ -21,7 +21,7 @@ public class Usuario extends Pessoa {
 	private String senha;
 
 	@Column(name = "nivel", nullable = false, length = 1)
-	private Nivel nivel;
+	private NivelUsuario nivel;
 
 	@Column(name = "ativo", nullable = false)
 	private Boolean ativo;
@@ -34,11 +34,11 @@ public class Usuario extends Pessoa {
 		this.senha = senha;
 	}
 
-	public Nivel getNivel() {
+	public NivelUsuario getNivel() {
 		return nivel;
 	}
 
-	public void setNivel(Nivel nivel) {
+	public void setNivel(NivelUsuario nivel) {
 		this.nivel = nivel;
 	}
 
