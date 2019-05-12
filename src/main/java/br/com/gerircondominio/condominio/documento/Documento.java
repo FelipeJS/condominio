@@ -27,7 +27,11 @@ public class Documento extends EntidadeBase {
 	@JoinColumn(name = "id_tipo_documento", nullable = false)
 	private TipoDocumento tipoDocumento;
 
+	@Column(name = "observacao", length = 1000)
+	private String observacao;
+
 	@Lob
+	@Column(name = "arquivo", nullable = false)
 	private byte[] arquivo;
 
 	public String getNome() {
@@ -44,6 +48,14 @@ public class Documento extends EntidadeBase {
 
 	public void setTipoDocumento(TipoDocumento tipoDocumento) {
 		this.tipoDocumento = tipoDocumento;
+	}
+
+	public String getObservacao() {
+		return observacao;
+	}
+
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
 	}
 
 	public byte[] getArquivo() {

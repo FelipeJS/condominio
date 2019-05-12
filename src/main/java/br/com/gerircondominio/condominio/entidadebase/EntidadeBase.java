@@ -36,4 +36,12 @@ public abstract class EntidadeBase {
 	public void setId(Long id) {
 		this.id = id;
 	}
+
+	public Calendar getDataCadastro() {
+		return dataCadastro;
+	}
+
+	public void setDataCadastro(Calendar dataCadastro) {
+		this.dataCadastro = dataCadastro;
+	}
 }
